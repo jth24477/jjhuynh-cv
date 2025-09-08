@@ -11,8 +11,8 @@ body {
 
 /* Nav Styles */
 nav {
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     padding: 0 0 0 0;
     background-color: #738290;
@@ -29,18 +29,17 @@ nav a {
 
 nav a {
     color: aliceblue;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 nav a:hover {
-    transition:0.3s;
+    transition: 0.3s;
     color: #635147;
 }
 
 /* Footer Styles */
 footer {
-    display:flex;
-    margin: 30px;
+    display: flex;
     padding: 30px;
     justify-content: center;
     font-family: "Markazi Text", serif;
@@ -51,11 +50,11 @@ footer {
 
 footer a {
     color: #635147;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 footer a:hover {
-    transition:0.3s;
+    transition: 0.3s;
     color: aliceblue;
 }
 
@@ -71,6 +70,7 @@ footer a:hover {
 
 .splash h1 {
     margin: 0;
+    color: white;
     font-family: "Playwrite DE LA", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -84,6 +84,7 @@ footer a:hover {
     font-size: 32px;
     margin: 0;
     text-align: center;
+    color: white;
 }
 
 /* Horizontal Rules */
@@ -100,11 +101,12 @@ section {
 
 /* Section Headings */
 section h2 {
-    color:#635147;
+    display: flex;
+    justify-content: center;
+    color: #635147;
     font-family: "Arsenal SC", serif;
     font-weight: 700;
     font-style: normal;
-    margin-left: 50px;
     text-align: center;
     font-size: 32px;
 }
@@ -116,13 +118,11 @@ section p {
 
 /* link styles */
 section a {
-    margin-left: 30px;
-    text-decoration:none;
+    text-decoration: none;
     color: #635147
 }
 
 section a:hover {
-    margin-left: 30px;
     color: aliceblue;
 }
 
@@ -149,17 +149,22 @@ dl dd {
 .three-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10px;
     border: #635147;
+    gap: 10px;
+    margin: 20px;
 }
 
 .card {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
     transition: 0.5s;
-    box-sizing: 10px;
     background-color: #ABAEAD;
     border: #635147;
-    padding: 2px 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card li {
+    padding: 0 60px 0 0;
 }
 
 .card img {
@@ -171,18 +176,19 @@ dl dd {
 .card h3 {
     font-family: "Markazi Text", serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
 }
+
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgb(0,0,0,0.8);
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, 0.8);
 }
 
 /* Contact Page Styles */
 .one-col {
-    display:grid;
+    display: grid;
     text-align: center;
     border: 3px;
-    display:inline-block;
+    display: inline-block;
 }
 
 form {
@@ -196,12 +202,12 @@ form {
 
 form input,
 form textarea {
-    width:100%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 3px solid #ccc;
     transition: 0.5s;
-    resize:vertical;
+    resize: vertical;
     margin: 8px 0;
     box-sizing: border-box;
     outline: none;
@@ -217,21 +223,22 @@ form button {
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
-    background-color:#635147;
-    color:aliceblue;
-    border:none;
+    background-color: #635147;
+    color: aliceblue;
+    border: none;
     padding: 16px 32px;
     margin: 4px 2px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form button:hover {
     cursor: pointer;
     background-color: aliceblue;
-    color:#635147;
+    color: #635147;
     transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* Thank You Page*/
 
 .thankyou h3 {
@@ -240,12 +247,27 @@ form button:hover {
     font-optical-sizing: auto;
     font-style: normal;
 }
+
 .thankyou a {
-    text-decoration:none;
-    color:#635147;
+    text-decoration: none;
+    color: #635147;
 }
 
 .thankyou a:hover {
-    transition:0.3s;
-    color:aliceblue
+    transition: 0.3s;
+    color: aliceblue
+}
+
+@media (max-width: 1000px) {
+
+    .three-col {
+        grid-template-columns: 1fr;
+        /* stack cards vertically */
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
 }
