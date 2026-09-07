@@ -2,39 +2,35 @@
 
 body {
     margin: 0;
-    background-color: #E3DAC9;
+    background-color: #f1eafd;
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Nav Styles */
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 0 0 0;
-    background-color: #738290;
+    padding: 5px;
+    background-color: #3F2A56;
     font-weight: 700;
-    text-align: center;
     font-size: 28px;
 }
 
-nav p,
-nav a {
-    color: aliceblue;
+nav p {
+    color: white;
     margin: 0;
+    text-align: left;
 }
 
 nav a {
-    color: aliceblue;
+    color: white;
     text-decoration: none;
 }
 
 nav a:hover {
-    transition: 0.3s;
-    color: #635147;
+    color:#f1eafd;
 }
 
 /* Footer Styles */
@@ -49,86 +45,111 @@ footer {
 }
 
 footer a {
-    color: #635147;
+    color: #3F2A56;
     text-decoration: none;
+    margin-left: 5px;
 }
 
 footer a:hover {
     transition: 0.3s;
-    color: aliceblue;
+    color: white;
 }
 
 /* Splash Section */
 .splash {
-    border: 0;
-}
-
-.splash section {
-
-    background-color: #738290;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .splash h1 {
     margin: 0;
-    color: white;
-    font-family: "Playwrite DE LA", serif;
+    color: #3F2A56;
+    font-family: "Markazi Text", serif;
     font-optical-sizing: auto;
     font-style: normal;
-}
-
-.splash img {
-    border-radius: 50%;
+    text-align: left;
 }
 
 .splash p {
-    font-size: 32px;
+    font-size: 1em;
     margin: 0;
-    text-align: center;
+    padding-left: 15px;
+    text-align: left;
+    color: #3F2A56;
+}
+
+.splash img {
+    width: 10em;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+.splash a {
+    color: #3F2A56;
+    text-decoration: none;
+}
+
+.splash a:hover {
     color: white;
 }
 
 /* Horizontal Rules */
 hr {
     margin: 0;
-    color: #635147;
-    border: 7px solid;
+    color: #3F2A56;
+    border: 2px solid;
 }
 
 /* Sections */
 section {
-    text-align: center;
+    text-align: left;
 }
 
-/* Section Headings */
-section h2 {
+/* Headings */
+h2 {
     display: flex;
-    justify-content: center;
-    color: #635147;
-    font-family: "Arsenal SC", serif;
+    justify-content: left;
+    color: #3F2A56;
+    font-family: "Markazi Text", serif;
     font-weight: 700;
-    font-style: normal;
-    text-align: center;
-    font-size: 32px;
+    font-style: bold;
+    text-align: left;
+    font-size: 50px;
+    padding-left: 30px;
+}
+
+.h3 {
+    color: black;
 }
 
 /* Paragraph Styles */
 section p {
-    text-align: center;
+    text-align: left;
+}
+
+.indent {
+    margin-left: 40px;
+    text-indent: -40px;
 }
 
 /* link styles */
 section a {
     text-decoration: none;
-    color: #635147
+    color: black;
 }
 
 section a:hover {
-    color: aliceblue;
+    color:#f1eafd ;
 }
 
 /* List Styles */
 ul {
-    list-style-type: circle;
+    list-style-type: none;
     list-style-position: inside;
 }
 
@@ -145,22 +166,138 @@ dl dd {
     grid-column-start: 2;
 }
 
-/* Project Section */
-.three-col {
+/* Skills Card */
+.skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: #635147;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-card {
+    padding: 10px;
+    box-shadow: 0 0 4px 0 rgba(63, 42, 86);
+    transition: 0.5s;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     gap: 10px;
-    margin: 20px;
+    text-align: center;
+}
+
+.skills-list-item {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 25%;
+}
+
+.skills-list-item:hover {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 25%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+    transition: .5s;
+}
+
+.skills-list li {
+    position: relative;
+    width: calc(25% - 15px);
+    display: flex;
+    justify-content: center;
+}
+
+.skills-list img {
+    height: auto;
+    box-sizing: border-box;
+}
+
+.skills-list img:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+    transition: .5s;
+}
+
+.skills-list span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(69, 19, 110, 0.6);
+    color: white;
+    opacity: 0;
+    transition: .5s;
+    font-weight: bold;
+}
+
+.skills-list li:hover span {
+    opacity: 1;
+}
+
+/* Exerience Section */
+
+.experience {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    padding: 20px;
+    border: 1px solid;
+    margin-top: 10px;
+
+}
+
+.experience-item h3 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.experience-item h4 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-item span {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-item p {
+    margin: 0;
+    padding-left: 40px;
+}
+
+.experience-card {
+    background-color: white;
+    width: 75%;
+    margin-left: 50px;
+}
+
+
+
+
+/* Project Section */
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.track {
+    display: flex;
+    transition: transform .5s ease;
 }
 
 .card {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
-    transition: 0.5s;
-    background-color: #ABAEAD;
-    border: #635147;
-    justify-content: center;
-    align-items: center;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 5px solid;
 }
 
 .card li {
@@ -168,36 +305,64 @@ dl dd {
 }
 
 .card img {
-    width: 400px;
+    display: block;
+    width: auto;
     height: 300px;
-    border: #635147 solid;
+    margin-left: auto;
+    margin-right:auto;
+    border: black solid;
 }
 
 .card h3 {
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 32px;
+    text-align: center;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, 0.8);
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(69, 19, 110,.6);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(69, 19, 110,.9);
+    transition: .5s ease;
 }
 
 /* Contact Page Styles */
 .one-col {
-    display: grid;
+    display: block;
     text-align: center;
-    border: 3px;
-    display: inline-block;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 form {
     margin: 0;
-    background-color: #E3DAC9;
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
     text-align: center;
+    color: black;
 }
 
 form input,
@@ -223,8 +388,8 @@ form button {
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
-    background-color: #635147;
-    color: aliceblue;
+    background-color: white;
+    color: black;
     border: none;
     padding: 16px 32px;
     margin: 4px 2px;
@@ -233,10 +398,22 @@ form button {
 
 form button:hover {
     cursor: pointer;
-    background-color: aliceblue;
-    color: #635147;
-    transition-duration: 0.4s;
+    background: rgba(69, 19, 110,.3);
+    transition: .5s ease;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-header {
+    text-align: center;
+    font-size: 48px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact-p {
+    text-align: center;
+    margin: 5px;
+    padding: 0px;
 }
 
 /* Thank You Page*/
